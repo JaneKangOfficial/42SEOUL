@@ -1,0 +1,3 @@
+    Name                Cache name                                 Expires
+* sakang@42SEOUL.KR   API:37D0DB3A-AC74-43E5-A94C-2088EA6C1038   Oct 14 04:55:08 2020
+  sakang@42SEOUL.KR   API:82C26D0D-74E9-47E8-AC4B-7933760FD19E   Oct 14 00:31:43 2020

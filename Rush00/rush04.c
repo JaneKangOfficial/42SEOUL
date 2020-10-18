@@ -6,12 +6,9 @@
 /*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/18 20:07:28 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/18 20:44:33 by sakang           ###   ########.fr       */
+/*   Updated: 2020/10/18 21:43:00 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-
 void	ft_putchar(char c);
 
 void	print_row(int x, char first, char middle, char last)

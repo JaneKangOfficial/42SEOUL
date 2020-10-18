@@ -1,1 +1,1 @@
-ls -rtlmp
+ls -Utmp

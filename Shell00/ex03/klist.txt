@@ -1,3 +1,5 @@
-    Name                Cache name                                 Expires
-* sakang@42SEOUL.KR   API:37D0DB3A-AC74-43E5-A94C-2088EA6C1038   Oct 14 04:55:08 2020
-  sakang@42SEOUL.KR   API:82C26D0D-74E9-47E8-AC4B-7933760FD19E   Oct 14 00:31:43 2020
+Credentials cache: API:805DC70D-4F94-4B30-A1A4-7237515D7A63
+        Principal: sakang@42SEOUL.KR
+
+  Issued                Expires               Principal
+Oct 15 19:22:55 2020  Oct 16 05:22:55 2020  krbtgt/42SEOUL.KR@42SEOUL.KR

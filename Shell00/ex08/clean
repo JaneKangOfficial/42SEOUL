@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 find . \( -name "*~" -o -name "#*#" \) -type f -print -delete
+=======
+find . \( -name “#*#” -o -name “*~” \) -type f -print -delete
+>>>>>>> b36a1c28989c93065f254002db9691154356de9e

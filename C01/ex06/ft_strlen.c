@@ -28,7 +28,10 @@ int		ft_strlen(char *str)
 int		main(void)
 {
 	char *str;
-	*str = "Hello";
-	ft_strlen(str);
+	str = "Hello";
+
+	int c;
+	c = ft_strlen(str) + '0';
+	write(1, &c, 1);
 	return (0);
 }

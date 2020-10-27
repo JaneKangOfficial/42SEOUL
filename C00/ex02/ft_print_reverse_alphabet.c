@@ -1,14 +1,23 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/27 13:46:11 by sakang            #+#    #+#             */
+/*   Updated: 2020/10/27 19:48:58 by sakang           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_print_reverse_alphabet(void);
-
-int main(void)
+void	ft_print_reverse_alphabet(void)
 {
-	ft_print_reverse_alphabet();
-}
+	char a;
 
-void ft_print_reverse_alphabet(void)
-{
-	for(char a='z'; a>='a'; a--)
-	write(1, &a, 1);
+	a = 'z';
+	while (a >= 'a')
+	{
+		write(1, &a, 1);
+		a--;
+	}
 }

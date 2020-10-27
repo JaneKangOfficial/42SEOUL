@@ -1,31 +1,50 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/27 16:44:18 by sakang            #+#    #+#             */
+/*   Updated: 2020/10/27 19:51:01 by sakang           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_print_comb(void);
-
-int main(void)
+void	ft_print_comb(void)
 {
-	ft_print_comb();
-	return 0;
+	int a;
+	int b;
+	int c;
+
+	a = '0';
+	while (a <= '7')
+	{
+		b = '1';
+		while (b <= '8')
+		{
+			c = '2';
+			while (c <= '9')
+			{
+				if ((a < b) && (b < c))
+				{
+					ft_putchar(a, b, c);
+				}
+				c++;
+			}
+			b++;
+		}
+		a++;
+	}
 }
 
-void ft_print_comb(void)
+void	ft_putchar(int a, int b, int c)
 {
-	int i;
-        int a;
-	char c;
-
-        i = 0;
-	int n[] = {1, 2, 3};
-	int nlength = sizeof(n) / sizeof(int);
-        while (i < nlength + 1)
-        {       a = n[i];
-                i++;
-        }
-	c = (char) a;
-
-
-	write(1, &c, 1); 
+	write(1, &a, 1);
+	write(1, &b, 1);
+	write(1, &c, 1);
+	if (a != '7')
+	{
+		write(1, ",", 1);
+		write(1, " ", 1);
+	}
 }
-	
-
-

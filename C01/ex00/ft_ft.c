@@ -6,25 +6,11 @@
 /*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 12:40:37 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/25 20:04:56 by sakang           ###   ########.fr       */
+/*   Updated: 2020/10/27 20:32:28 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 void	ft_ft(int *nbr)
 {
 	*nbr = 42;
-}
-
-int		main(void)
-{
-	int a = 0;
-	int *nbr;
-
-	nbr = &a;
-	printf("%d\n", *nbr);
-	ft_ft(nbr);
-	printf("%d", *nbr);
-	return (0);
 }

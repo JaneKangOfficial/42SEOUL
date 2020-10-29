@@ -6,9 +6,11 @@
 /*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 13:46:11 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/27 19:48:58 by sakang           ###   ########.fr       */
+/*   Updated: 2020/10/29 12:10:48 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 void	ft_print_reverse_alphabet(void)
 {

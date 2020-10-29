@@ -11,11 +11,8 @@ char		*ft_strncpy(char *dest, char *src, unsigned int n)
 				i++;
 			}
 
-			while (i < n)
-			{
 				dest[i] = '\0';
 				i++;
-			}
 			return dest;
 }
 
@@ -27,6 +24,5 @@ int			main(void)
 
 	ft_strncpy(a, b, c);
 	printf("%s", a);
-	printf("%d", c);
 	return (0);
 }

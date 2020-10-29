@@ -6,19 +6,11 @@
 /*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 14:08:19 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/27 19:03:39 by sakang           ###   ########.fr       */
+/*   Updated: 2020/10/29 17:57:19 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
-void	ft_print_combn(int n);
-
-int		main(void)
-{
-	ft_print_combn(3);
-	return (0);
-}
 
 void	ft_print_combn(int n)
 {
@@ -36,4 +28,10 @@ void	ft_print_combn(int n)
 			a++;
 		}
 	}
+}
+
+int		main(void)
+{
+	ft_print_combn(3);
+	return (0);
 }

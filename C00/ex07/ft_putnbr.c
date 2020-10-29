@@ -1,40 +1,61 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/25 16:36:20 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/29 18:08:28 by sakang           ###   ########.fr       */
+/*   Created: 2020/10/27 14:06:08 by sakang            #+#    #+#             */
+/*   Updated: 2020/10/29 17:44:55 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_rev_int_tab(int *tab, int size)
+void	final(int i, int nb)
 {
-	int r;
+	char	arr[i];
+	int		a;
 
-	r = 0;
-	while (size != 0)
+	a = 0;
+	while (a < i)
 	{
-		r *= 10;
-		r += *tab % 10;
-		*tab /= 10;
-		size--;
+		a++;
+		arr[i - a] = nb % 10 + '0';
+		nb /= 10;
 	}
+	write(1, arr, i);
 }
 
-int		main(void)
+void	digit(int nb)
 {
-	int *tab;
-	int size;
-	int a;
+	int i;
+	int j;
 
-	a = 123;
-	tab = &a;
-	size = 3;
-	ft_rev_int_tab(tab, size);
-	return (0);
+	i = 0;
+	j = nb;
+	while (j > 0)
+	{
+		j /= 10;
+		i++;
+	}
+	final(i, nb);
+}
+
+void	ft_putnbr(int nb)
+{
+	if (nb == -2147483648)
+	{
+		write(1, "-2147483648", 11);
+	}
+	else if (nb < 0)
+	{
+		nb = -nb;
+		write(1, "-", 1);
+	}
+	if (nb == 0)
+	{
+		write(1, "0", 1);
+	}
+	digit(nb);
 }

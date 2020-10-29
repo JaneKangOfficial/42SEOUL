@@ -6,20 +6,20 @@
 /*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 13:47:24 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/27 21:36:17 by sakang           ###   ########.fr       */
+/*   Updated: 2020/10/29 14:15:58 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 void	ft_print_numbers(void)
 {
-	int		i;
-	char	c;
+	char	i;
 
 	i = '0';
 	while (i <= '9')
 	{
-		c = (char)i;
-		write(1, &c, 1);
+		write(1, &i, 1);
 		i++;
 	}
 }

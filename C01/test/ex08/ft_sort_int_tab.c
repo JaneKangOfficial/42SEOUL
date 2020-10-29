@@ -6,11 +6,11 @@
 /*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 18:36:32 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/27 20:23:10 by sakang           ###   ########.fr       */
+/*   Updated: 2020/10/29 19:26:10 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
 void	ft_sort_int_tab(int *tab, int size);
 
@@ -24,7 +24,7 @@ void	ft_sort_int_tab(int *tab, int size)
 		while (i < size)
 		{
 			j = i + 1;
-			if ((tab[i]) > (tab[j]))
+			if (tab[i] > tab[j])
 			{
 				temp = *tab[i];
 				*tab[i] = *tab[j];
@@ -37,13 +37,8 @@ void	ft_sort_int_tab(int *tab, int size)
 
 int		main(void)
 {
-		int a[6];
-		int *tab;
-		int size;
-
- 		a[6] = {6,2,5,3,4,1};
-	   	tab	= &a;
-		size = 6;
+		int size = 6;
+ 		int *tab = "6 2 5 3 4 1";
 		ft_sort_int_tab(tab, size);
 		return (0);
 }

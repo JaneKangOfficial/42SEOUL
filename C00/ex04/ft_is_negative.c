@@ -6,23 +6,16 @@
 /*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 13:53:10 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/27 19:49:39 by sakang           ###   ########.fr       */
+/*   Updated: 2020/10/29 14:16:33 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 void	ft_is_negative(int n)
 {
-	char cn;
-	char cp;
-
 	if (n < 0)
-	{
-		cn = 'N';
-		write(1, &cn, 1);
-	}
+		write(1, "N", 1);
 	else
-	{
-		cp = 'P';
-		write(1, &cp, 1);
-	}
+		write(1, "P", 1);
 }

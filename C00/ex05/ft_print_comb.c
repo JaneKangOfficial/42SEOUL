@@ -6,9 +6,23 @@
 /*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 16:44:18 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/27 19:51:01 by sakang           ###   ########.fr       */
+/*   Updated: 2020/10/29 14:18:36 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
+
+void	ft_putchar(char a, char b, char c)
+{
+	write(1, &a, 1);
+	write(1, &b, 1);
+	write(1, &c, 1);
+	if (a != '7')
+	{
+		write(1, ",", 1);
+		write(1, " ", 1);
+	}
+}
 
 void	ft_print_comb(void)
 {
@@ -34,17 +48,5 @@ void	ft_print_comb(void)
 			b++;
 		}
 		a++;
-	}
-}
-
-void	ft_putchar(int a, int b, int c)
-{
-	write(1, &a, 1);
-	write(1, &b, 1);
-	write(1, &c, 1);
-	if (a != '7')
-	{
-		write(1, ",", 1);
-		write(1, " ", 1);
 	}
 }

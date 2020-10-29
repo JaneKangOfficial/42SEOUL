@@ -6,18 +6,40 @@
 /*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/27 14:06:08 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/27 19:00:34 by sakang           ###   ########.fr       */
+/*   Updated: 2020/10/29 17:44:55 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putnbr(int nb);
-
-int		main(void)
+void	final(int i, int nb)
 {
-	ft_putnbr(345);
-	return (0);
+	char	arr[i];
+	int		a;
+
+	a = 0;
+	while (a < i)
+	{
+		a++;
+		arr[i - a] = nb % 10 + '0';
+		nb /= 10;
+	}
+	write(1, arr, i);
+}
+
+void	digit(int nb)
+{
+	int i;
+	int j;
+
+	i = 0;
+	j = nb;
+	while (j > 0)
+	{
+		j /= 10;
+		i++;
+	}
+	final(i, nb);
 }
 
 void	ft_putnbr(int nb)
@@ -26,9 +48,20 @@ void	ft_putnbr(int nb)
 	{
 		write(1, "-2147483648", 11);
 	}
-	if (nb < '0')
+	else if (nb < 0)
 	{
 		nb = -nb;
 		write(1, "-", 1);
 	}
+	if (nb == 0)
+	{
+		write(1, "0", 1);
+	}
+	digit(nb);
+}
+
+int		main(void)
+{
+	ft_putnbr(345);
+	return (0);
 }

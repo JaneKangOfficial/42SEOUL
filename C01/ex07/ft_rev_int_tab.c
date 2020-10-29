@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 void	ft_rev_int_tab(int *tab, int size)
 {
 	int r;
@@ -24,17 +22,4 @@ void	ft_rev_int_tab(int *tab, int size)
 		*tab /= 10;
 		size--;
 	}
-}
-
-int		main(void)
-{
-	int *tab;
-	int size;
-	int a;
-
-	a = 123;
-	tab = &a;
-	size = 3;
-	ft_rev_int_tab(tab, size);
-	return (0);
 }

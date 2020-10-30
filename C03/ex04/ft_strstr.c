@@ -12,6 +12,12 @@ char	*ft_strstr(char *str, char *to_find)
 			{
 				write(1, str, 1);
 			}
+
+			if (*str == '\0')
+			{
+				return str;
+			}
+
 			to_find++;
 		}
 		str++;
@@ -24,8 +30,8 @@ int		main(void)
 	char *a;
 	char *b;
 
-	a = "abc";
-	b = "bcd";
+	a = "abceh";
+	b = "bcdfg";
 
 	ft_strstr(a, b);
 	return (0);

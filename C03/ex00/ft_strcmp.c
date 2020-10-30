@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include <string.h>
+//#include <string.h>
 
 int		ft_strcmp(char *s1, char *s2);
 
@@ -9,7 +9,7 @@ int		ft_strcmp(char *s1, char *s2)
 	{
 		s1++;
 		s2++;
-	
+
 		if (*s1 == *s2)
 		{
 			continue;
@@ -20,7 +20,7 @@ int		ft_strcmp(char *s1, char *s2)
 		}
 		else if (*s1 < *s2)
 		{
-			return (-1);
+			write(1, "-1", 1);
 		}
 	}
 	return (0);
@@ -37,8 +37,5 @@ int		main(void)
 	my = ft_strcmp(a, b) + '0';
 	write(1, &my, 1);
 
-	//char ret;
-	//ret = strcmp(a, b);
-	//write(1, &ret, 1);
 	return (0);
 }

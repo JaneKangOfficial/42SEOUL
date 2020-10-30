@@ -25,9 +25,9 @@ int		main(void)
 	unsigned int c;
 	char d;
 
-	a = "Hello";
-	b = "Hell";
-	c = 6;
+	a = "Hella";
+	b = "Hellb";
+	c = 5;
 	d = ft_strncmp(a, b, c) + '0';
 	write(1, &d, 1);
 	return (0);

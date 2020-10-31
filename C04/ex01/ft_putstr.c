@@ -1,48 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakang <sakang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 19:46:42 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/31 19:48:12 by sakang           ###   ########.fr       */
+/*   Created: 2020/10/31 20:30:08 by sakang            #+#    #+#             */
+/*   Updated: 2020/10/31 20:30:27 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char	*ft_strstr(char *str, char *to_find)
+void	ft_putstr(char *str)
 {
-	int i;
-	int j;
-
-	i = 0;
-	while (str[i])
+	while (*str)
 	{
-		j = 0;
-		if (str[i] == to_find[j])
-		{
-			while (str[i + j] == to_find[j])
-			{
-				j++;
-				if (to_find[j] == '\0')
-					return (&str[i]);
-			}
-		}
-		i++;
+		write(1, str++, 1);
 	}
-	return (0);
 }
 
 int		main(void)
 {
 	char *a;
-	char *b;
-	char c[5];
 
-	a = "abceh";
-	b = "ce";
-	*c = *ft_strstr(a, b);
+	a = "ABC";
+	ft_putstr(a);
 	return (0);
 }

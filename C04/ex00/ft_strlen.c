@@ -1,48 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakang <sakang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 19:46:42 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/31 19:48:12 by sakang           ###   ########.fr       */
+/*   Created: 2020/10/31 19:52:39 by sakang            #+#    #+#             */
+/*   Updated: 2020/10/31 20:23:14 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-char	*ft_strstr(char *str, char *to_find)
+int		ft_strlen(char *str)
 {
 	int i;
-	int j;
 
 	i = 0;
 	while (str[i])
 	{
-		j = 0;
-		if (str[i] == to_find[j])
-		{
-			while (str[i + j] == to_find[j])
-			{
-				j++;
-				if (to_find[j] == '\0')
-					return (&str[i]);
-			}
-		}
 		i++;
 	}
-	return (0);
+	return (i);
 }
 
 int		main(void)
 {
 	char *a;
-	char *b;
-	char c[5];
 
-	a = "abceh";
-	b = "ce";
-	*c = *ft_strstr(a, b);
+	a = "ABC";
+	ft_strlen(a);
 	return (0);
 }

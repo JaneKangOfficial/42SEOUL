@@ -32,8 +32,12 @@ void	ft_putnbr(int nb)
 
 int		main(void)
 {
-	int a;
-	a = 0;
-	ft_putnbr(a);
+	int a, b;
 
+	printf("첫번째 값을 입력하세요 > ");
+	scanf("%d", &a);
+	printf("두번째 값을 입력하세요 > ");
+	scanf("%d", &b);
+
+	printf("두 값의 합은 %d 입니다\n", a + b);
 }

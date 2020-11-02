@@ -1,35 +1,59 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sakang <sakang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 19:52:39 by sakang            #+#    #+#             */
-/*   Updated: 2020/11/02 18:47:55 by sakang           ###   ########.fr       */
+/*   Created: 2020/11/02 18:20:16 by sakang            #+#    #+#             */
+/*   Updated: 2020/11/02 19:15:10 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
 
-int		ft_strlen(char *str)
+void	ft_atoi(char *str)
 {
+	int sign;
+	int a;
 	int i;
 
+	sign = 0;
+	a = 0;
 	i = 0;
-	while (str[i])
+	//while (*str && (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\v' || *str == '\f' || *str == '\r'))
+	while (*str)
 	{
-		i++;
+		//write(1, str++, 1);
+		//++str;
+
+		if (*str == '-')
+		{
+			sign++;
+		
+		//	sign *= -1;
+		//	write(1, &sign, 1);
+		}
+
+	
+
+		//else
+		//{
+	//		printf("%c", 'A');
+	//	}
+		//printf("%d", count);
+		str++;
 	}
-	return (i);
 }
 
 int		main(void)
 {
 	char *a;
 
-	a = "ABC";
-	ft_strlen(a);
+	a = "   ---+--+1234ab567";
+	ft_atoi(a);
+
+	//-1234 출력결과
 	return (0);
 }

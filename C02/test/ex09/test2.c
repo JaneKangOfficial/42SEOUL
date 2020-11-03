@@ -3,14 +3,14 @@
 char		*ft_strcapitalize(char *str)
 {
 	int i;
-	i = 0;
+	i = 1;
 	while (str[i] != '\0')
 	{
 		if (str[0] >= 'a' && str[i] <= 'z')
 		{
 			str[0] -= 32;
 		}
-		if (str[i] >= 'a' && str[i] <= 'z')
+		else if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			if (str[i-1] == 32 || str[i-1] == 45 || str[i-1] == 43)
 			{
@@ -25,7 +25,7 @@ char		*ft_strcapitalize(char *str)
 int			main(void)
 {
 	//char a[] = "     salut, Comment tu vas ? 42mots quarante-deux; cinquante+et+un";
-	char a[] = "ReKt17+LOl MdR Mdr 4242l42";
+	char a[] = "NULL";
 
 	ft_strcapitalize(a);
 	write(1, ft_strcapitalize(a), sizeof(a));

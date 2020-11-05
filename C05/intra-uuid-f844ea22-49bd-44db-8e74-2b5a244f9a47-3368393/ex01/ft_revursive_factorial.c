@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_revursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sakang <sakang@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/31 20:30:08 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/31 20:30:27 by sakang           ###   ########.fr       */
+/*   Created: 2020/11/05 18:24:33 by sakang            #+#    #+#             */
+/*   Updated: 2020/11/05 18:24:45 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putstr(char *str)
+int		ft_recursive_factorial(int nb)
 {
-	while (*str)
-		write(1, str++, 1);
+	if (nb == 0)
+		return (1);
+	return (nb * ft_recursive_factorial(nb - 1));
 }

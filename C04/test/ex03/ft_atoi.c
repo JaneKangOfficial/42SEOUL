@@ -12,44 +12,40 @@
 
 #include <unistd.h>
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 int		ft_atoi(char *str)
 {
 	int sign;
-	int n;
+	unsigned int n;
 	int i;
 
 	sign = 0;
 	n = 0;
 	i = 0;
-	while (*str && (*str == ' ' || *str == '\t' ||
-		*str == '\n' || *str == '\v' || *str == '\f' || *str == '\r'))
+	while (str[i] == ' ' || str[i] == '\t' ||
+		str[i] == '\n' || str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
+		i++;
+	while (str[i] == '-' || str[i] == '+')
 	{
-		if (*str == '-')
-		{
-			sign++;
-		}
-		str++;
+		if (str[i] == '-')
+			sign++;;
 		i++;
 	}
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
-	{
 		n = n * 10 + (str[i++] - '0');
-	}
-
-	//if (sign % 2 == 1)
-		//write(1, "-", 1);
+	if ((n > 2147483647 && sign == 0) || (n > 2147483648 && sign == 1))
+		return (0);
 	return ((int) (sign % 2 == 1? -n : n));
 }
 
 int		main(void)
 {
-	char *a;
-
-	a = "   ---+--+1234ab567";
+	char a[20] = "   ---+--+1234ab567";
 	ft_atoi(a);
-
-	printf("%d", ft_atoi(a));
+	printf("atoi : %d\n", atoi(a));
+	printf("my : %d\n", ft_atoi(a));
 	//-1234 출력결과
 	return (0);
 }

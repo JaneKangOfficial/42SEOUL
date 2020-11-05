@@ -4,18 +4,20 @@
 
 char	*ft_strcat(char *dest, char *src)
 {
-	char *temp;
+	int i;
+	int j;
 
-	temp = dest;
-	while (*dest != '\0')
-		dest++;
-	while (*src != '\0')
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (src[j] != '\0')
 	{
-		*dest = *src;
-		src++;
+		dest[i] = src[j];
+		j++;
 	}
-	*dest = '\0';
-	return (temp);
+	dest[i] = '\0';
+	return (dest);
 }
 
 int		main(void)

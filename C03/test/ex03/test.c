@@ -4,21 +4,23 @@
 
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int i;
-	char *temp;
-
-	temp = dest;
+	unsigned int i;
+	unsigned int j;
+	
 	i = 0;
-	while (*dest != '\0')
-		dest++;
-	while (*src != '\0' && i < nb)
+	j = 0;
+	while (dest[i] != '\0')
 	{
-		dest = src;
-		src++;
 		i++;
 	}
-	*src = '\0';
-	return (temp);
+
+	while (src[j] != '\0' && i <= nb)
+	{
+		dest[i] = src[j];
+		j++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
 
 int		main(void)
@@ -29,7 +31,7 @@ int		main(void)
 
 	char a[20] = "Hello";
 	char b[] = "World";
-	unsigned int c = 5;
+	unsigned int c = 3;
 
 	ft_strncat(a, b, c);
 	printf("strncat : %s\n", strncat(a, b, c));

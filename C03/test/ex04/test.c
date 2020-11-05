@@ -6,7 +6,7 @@
 /*   By: sakang <sakang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 19:46:42 by sakang            #+#    #+#             */
-/*   Updated: 2020/11/05 11:49:05 by sakang           ###   ########.fr       */
+/*   Updated: 2020/11/03 21:43:20 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strstr(char *str, char *to_find)
 	int j;
 
 	i = 0;
-	while (*str)
+	while (str[i])
 	{
 		j = 0;
 		if (str[i] == to_find[j])
@@ -32,8 +32,6 @@ char	*ft_strstr(char *str, char *to_find)
 					return (&str[i]);
 			}
 		}
-		else if (str[i] != to_find[j])
-			return (0);
 		i++;
 	}
 	return (0);
@@ -45,7 +43,7 @@ int		main(void)
 	char *b;
 
 	a = "abceh";
-	b = "abc";
+	b = "ce";
 	ft_strstr(a, b);
 	printf("my : %s\n", ft_strstr(a, b));
 	printf("strstr : %s\n", strstr(a, b));

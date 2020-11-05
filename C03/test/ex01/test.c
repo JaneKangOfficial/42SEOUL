@@ -6,7 +6,7 @@
 /*   By: sakang <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 12:55:48 by sakang            #+#    #+#             */
-/*   Updated: 2020/11/05 11:15:17 by sakang           ###   ########.fr       */
+/*   Updated: 2020/11/05 11:13:35 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ int		ft_strncmp(char *s1, char *s2, unsigned int n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while ((*s1 != '\0' || *s2 != '\0') && i < n)
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
 	{
-		if (*s1 != *s2)
-			return (*s1 - *s2);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
 		i++;
 	}
-	return (*s1 - *s2);
+	return (s1[i] - s2[i]);
 }
 
 int		main(void)
@@ -37,8 +37,8 @@ int		main(void)
 	unsigned int c;
 	char d;
 
-	a = "Helloo";
-	b = "Hello";
+	a = "Hello";
+	b = "Helloo";
 	c = 5;
 	d = ft_strncmp(a, b, c);
 	printf("my : %d\n", d);

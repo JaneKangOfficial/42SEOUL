@@ -6,7 +6,7 @@
 /*   By: sakang <sakang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:20:16 by sakang            #+#    #+#             */
-/*   Updated: 2020/11/03 17:42:59 by sakang           ###   ########.fr       */
+/*   Updated: 2020/11/05 18:07:27 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int		main(void)
 	char a[20] = "   ---+--+1234ab567";
 	ft_atoi(a);
 	printf("atoi : %d\n", atoi(a));
-	printf("my : %d\n", ft_atoi(a));
+//	printf("my : %d\n", ft_atoi(a));
 	//-1234 출력결과
 	return (0);
 }

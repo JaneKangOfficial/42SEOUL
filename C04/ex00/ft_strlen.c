@@ -6,9 +6,11 @@
 /*   By: sakang <sakang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 19:52:39 by sakang            #+#    #+#             */
-/*   Updated: 2020/11/03 13:58:45 by sakang           ###   ########.fr       */
+/*   Updated: 2020/11/05 12:48:11 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
 
 int		ft_strlen(char *str)
 {
@@ -16,8 +18,6 @@ int		ft_strlen(char *str)
 
 	i = 0;
 	while (str[i])
-	{
 		i++;
-	}
 	return (i);
 }

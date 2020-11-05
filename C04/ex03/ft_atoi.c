@@ -6,15 +6,17 @@
 /*   By: sakang <sakang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 18:20:16 by sakang            #+#    #+#             */
-/*   Updated: 2020/11/03 17:42:59 by sakang           ###   ########.fr       */
+/*   Updated: 2020/11/05 12:52:25 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 int		ft_atoi(char *str)
 {
-	int sign;
-	unsigned int n;
-	int i;
+	int				sign;
+	unsigned int	n;
+	int				i;
 
 	sign = 0;
 	n = 0;
@@ -25,12 +27,12 @@ int		ft_atoi(char *str)
 	while (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
-			sign++;;
+			sign++;
 		i++;
 	}
 	while (str[i] && str[i] >= '0' && str[i] <= '9')
 		n = n * 10 + (str[i++] - '0');
 	if ((n > 2147483647 && sign == 0) || (n > 2147483648 && sign == 1))
 		return (0);
-	return ((int) (sign % 2 == 1? -n : n));
+	return ((int)(sign % 2 == 1 ? -n : n));
 }

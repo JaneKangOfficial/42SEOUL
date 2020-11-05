@@ -6,7 +6,7 @@
 /*   By: sakang <sakang@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 20:30:08 by sakang            #+#    #+#             */
-/*   Updated: 2020/10/31 20:30:27 by sakang           ###   ########.fr       */
+/*   Updated: 2020/11/05 12:48:28 by sakang           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_putstr(char *str)
 {
-	while (*str)
-		write(1, str++, 1);
+	int i;
+
+	i = 0;
+	while (str[i])
+		write(1, &str[i++], 1);
 }

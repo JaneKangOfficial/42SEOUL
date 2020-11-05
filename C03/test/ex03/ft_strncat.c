@@ -5,20 +5,20 @@
 char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
 	int i;
-	char *temp;
+	unsigned int j;
 
-	temp = dest;
 	i = 0;
-	while (*dest != '\0')
-		dest++;
-	while (*src != '\0' && i < nb)
-	{
-		dest = src;
-		src++;
+	while (dest[i])
 		i++;
+	j = 0;
+	while (src[j] && j < nb)
+	{
+		dest[i] = src[j];
+		i++;
+		j++;
 	}
-	*src = '\0';
-	return (temp);
+	dest[i] = '\0';
+	return (dest);
 }
 
 int		main(void)
@@ -32,7 +32,7 @@ int		main(void)
 	unsigned int c = 5;
 
 	ft_strncat(a, b, c);
-	printf("strncat : %s\n", strncat(a, b, c));
+//	printf("strncat : %s\n", strncat(a, b, c));
 	printf("my : %s\n", ft_strncat(a, b, c));
 	return (0);
 }

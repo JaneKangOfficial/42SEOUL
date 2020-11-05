@@ -15,7 +15,7 @@ int		main(void)
 	int b;
 
 	a = 2;
-	b = 3;
+	b = 1;
 	ft_recursive_power(a, b);
 	printf("my : %d\n", ft_recursive_power(a, b));
 	return (0);

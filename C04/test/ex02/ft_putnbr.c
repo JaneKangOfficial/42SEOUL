@@ -33,7 +33,7 @@ void	ft_putnbr(int nb)
 int		main(void)
 {
 	int a;
-	a = -123;
+	a = 42;
 	ft_putnbr(a);
 
 }
